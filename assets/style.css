@@ -133,6 +133,35 @@ tr:last-child td { border-bottom: none; }
 .sec .faq { margin-top: 20px; }
 .answer p + ul { margin-top: 12px; }
 
+/* pagine domanda */
+.lead.qa { color: var(--text); padding-left: 18px; border-left: 3px solid var(--accent); max-width: 62ch; }
+.lead a, .prose a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.prose { max-width: 68ch; }
+.prose h2 { margin-top: 40px; font-weight: 700; font-size: clamp(21px, 3vw, 26px); line-height: 1.25; letter-spacing: -0.3px; }
+.prose p, .prose li { font-size: 17px; line-height: 1.75; color: var(--muted); }
+.prose p { margin-top: 14px; }
+.prose ul { margin-top: 12px; padding-left: 22px; }
+.prose li + li { margin-top: 8px; }
+.prose .tw { margin-top: 20px; }
+.prose td:first-child { color: var(--text); }
+.sources { margin-top: 44px; }
+.sources h2, .more h2 { font-size: 15px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); }
+.sources ul { margin-top: 12px; padding-left: 20px; }
+.sources li { margin-top: 6px; font-size: 15px; line-height: 1.5; color: var(--muted); }
+.allq { display: inline-block; margin-top: 22px; font-weight: 600; font-size: 16px; text-decoration: none; }
+.allq::after { content: " →"; }
+.allq:hover { text-decoration: underline; }
+
+/* elenco domande */
+.qlist { list-style: none; margin-top: 20px; border-top: 1px solid var(--line); }
+.qlist a { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); color: var(--text); text-decoration: none; }
+.qlist b { display: block; font-weight: 600; font-size: clamp(17px, 2.2vw, 20px); line-height: 1.35; transition: color .2s; }
+.qlist .d { display: block; margin-top: 6px; font-size: 15px; line-height: 1.5; color: var(--muted); }
+.qlist a::after { content: ""; flex: none; width: 10px; height: 10px; margin-top: 9px; margin-right: 4px; border-right: 2.5px solid var(--accent); border-top: 2.5px solid var(--accent); transform: rotate(45deg); transition: transform .2s; }
+.qlist a:hover b, .qlist a:focus-visible b { color: var(--accent); }
+.qlist a:hover::after { transform: translateX(3px) rotate(45deg); }
+.qlist a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 6px; }
+
 footer.bottom { position: relative; z-index: 1; padding: 20px var(--pad) calc(26px + env(safe-area-inset-bottom)); font-size: 12px; color: var(--faint); }
 
 @media (prefers-reduced-motion: reduce) {
