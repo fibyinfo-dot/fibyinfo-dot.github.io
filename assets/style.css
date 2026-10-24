@@ -50,14 +50,14 @@ main.home {
   padding: 40px var(--pad);
 }
 .label { font-size: clamp(13px, 1.6vw, 16px); font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 12px; }
-.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+.dot { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(40,183,251,0.55); }
   70% { box-shadow: 0 0 0 11px rgba(40,183,251,0); }
   100% { box-shadow: 0 0 0 0 rgba(40,183,251,0); }
 }
-h1.big { margin-top: 22px; font-weight: 700; font-size: clamp(50px, 11vw, 120px); line-height: 1.02; letter-spacing: -1.5px; }
-h1.big span { color: var(--accent); }
+.big { margin-top: 22px; font-weight: 700; font-size: clamp(50px, 11vw, 120px); line-height: 1.02; letter-spacing: -1.5px; }
+.big span { color: var(--accent); }
 .sub { margin-top: 26px; max-width: 30ch; font-size: clamp(18px, 2.6vw, 26px); line-height: 1.45; color: var(--muted); }
 .actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
 .cta {
@@ -167,3 +167,12 @@ footer.bottom { position: relative; z-index: 1; padding: 20px var(--pad) calc(26
 @media (prefers-reduced-motion: reduce) {
   .dot { animation: none; } * { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* home: titolo semantico e guide */
+h1.label { margin: 0; }
+.guides { position: relative; z-index: 1; padding: 8px var(--pad) 48px; max-width: calc(780px + var(--pad) * 2); width: 100%; }
+.guides h2 { font-size: 15px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); }
+/* footer con link alle guide */
+.fnav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 12px; }
+.fnav a { color: var(--muted); text-decoration: none; font-size: 13px; }
+.fnav a:hover, .fnav a:focus-visible { color: var(--accent); }

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fibyinfo-dot.github.io/sitemap.xml
+Sitemap: https://fiby.it/sitemap.xml
